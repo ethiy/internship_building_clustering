@@ -25,7 +25,11 @@
     \item
     \end{itemize}
 
+    3D urban reconstruction is a very active research subject. In fact, urban models have a wide application range from planning to simulation or visualization. For instance, 3D city models can be used to efficiently plan cell phone tower constructions. In spite of efforts in the research community, urban modelling widely involves human interaction [Musialski et al., 2012]. In fact, even though automatic reconstruction models are seamless, they require human operator to control the quality of the final output. The laborious human correction process actually requires a significant amount of time, which entices the non-scalability of the overall process. It is then paramount that we design a qualification method that can easily recognize and label errors in the 3D model. Potentially, it should recommend, accordingly, a set of simple actions to the operator.
 
+Our approach is based upon supervised classification. Indeed, in IGN, we have established an error taxonomy based on the models we have in hand [Boudet and Paparoditis, 2006; Michelin et al., 2013]. The classification self-diagnoses the reconstructed buildings based on hand-crafted features. The main idea behind this approach is to be able to assess the reconstruction process without having to manually acquire 3D reference data that are not easy to come by. We also target to evaluate which methods are the best suited for a given level of details and subsequently for a given range of applications.
+
+In this intership, we look forward to investigating non supervised methods. Fearing that the error taxonomy may not be fully scalable, we are looking into non supervised methods in order to discover new errors and in parallel efficiently broadcast the already detected errors to unseen areas. The student will have to look into manifold learning techniques. We can start off with the baseline hand-crafted features used for the supervised method. We will in particular investigate the relevance of graph kernels. Last but not least, the student will try learned-features-based methods: auto-encoders and Boltzman machines, for instance.
 
     \subsection*{Environnement technique}
     \begin{itemize}
