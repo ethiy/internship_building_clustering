@@ -1,121 +1,65 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage{indentfirst}
-\usepackage[pdftex]{graphicx}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{color}
+
 \usepackage[francais]{babel}
-\usepackage{ulem,geometry,multicol, multirow}
-\usepackage{ae,url}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\normalem
-\geometry{margin={70pt,70pt}}
 
-%%%% debut macro %%%%
-\makeatletter    % <=== in a .sty file delete this
+\usepackage{matis_proposal}
 
-\newcommand{\unnumberedcaption}%
-	{\@dblarg{\@unnumberedcaption\@captype}}
+\title{Title}
+\date{}
 
-\newcommand{\@unnumberedcaption}{}% undefined yet
-\long\def\@unnumberedcaption#1[#2]#3{\par
-  \addcontentsline{\csname ext@#1\endcsname}{#1}{%
-    % orig: \protect\numberline{\csname the#1\endcsname}%
-    %{\ignorespaces #2}
-    \protect\numberline{}{\ignorespaces #2}%
-    }%
-  \begingroup
-    \@parboxrestore
-    \normalsize
-    % orig: \@makecaption{\csname fnum@#1\endcsname}%
-    %{\ignorespaces #3}\par
-    \@makeunnumberedcaption{\ignorespaces #3}\par
-  \endgroup}
-
-% redefine \@makeunnumberedcaption (like \@makecaption)
-% for your own layout
-\newcommand{\@makeunnumberedcaption}[1]{%
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1}%
-  \ifdim \wd\@tempboxa >\hsize
-    #1\par
-  \else
-    \global \@minipagefalse
-    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
-  \fi
-  \vskip\belowcaptionskip}
-
-% for LaTeX 2.09 compatibility, define \above/belowcaptionskip:
-\@ifundefined{abovecaptionskip}{%
-  \newlength{\abovecaptionskip}%
-  \setlength{\abovecaptionskip}{10pt}%
-}{}
-\@ifundefined{belowcaptionskip}{%
-  \newlength{\belowcaptionskip}%
-  \setlength{\belowcaptionskip}{0pt}%
-}{}
-
-\makeatother    % <=== in a .sty file delete this
-%%%% fin macro %%%%
-\newcommand{\LOIC}[1]{\textcolor{red}{#1}}
 \begin{document}
-\hspace{-1.0cm}
-\begin{center}
-\begin{tabular}{ccc}
-\includegraphics[height=0.08\textheight]{images/logo_ign.jpg} & \includegraphics[height=0.08\textheight]{images/matis.jpg} & \includegraphics[height=0.06\textheight]{images/logo_paris_est}\\
-\end{tabular}
-\end{center}
-\vspace{1ex}
-\begin{center}
-\Large{
-Title
-}
-\end{center}
 
-\vspace{0.5cm}
-\begin{center}
-IGN - Laboratoire LaSTIG - Equipe MATIS\\73 avenue de Paris 94165 Saint Mandé.
-\end{center}
+    \maketitle
+
+    \section*{Contexte}
+    \noindent
+    \par
+    L'équipe MATIS du Laboratoire LaSTIG de l'Institut National de l'information géographique et forestière (IGN) mène depuis plusieurs années
+
+    \section*{Objectifs du stage}
 
 
-\section*{Contexte}
-\noindent
-\par
-L'équipe MATIS du Laboratoire LaSTIG de l'Institut National de l'information géographique et forestière (IGN) mène depuis plusieurs années
-
-\section*{Objectifs du stage}
-
-
-%volume de données
-Travail à réaliser :
-\begin{itemize}
-\item
-\end{itemize}
+    %volume de données
+    Travail à réaliser :
+    \begin{itemize}
+    \item
+    \end{itemize}
 
 
 
-\subsection*{Environnement technique}
-Python/C++ comme langage de programmation.
+    \subsection*{Environnement technique}
+    \begin{itemize}
+        \item[OS:] Linux (Ubuntu);
+        \item[Language:] Python:
+        \begin{itemize}
+            \item scikit-learn,
+            \item opencv,
+            \item scikit-image.
+        \end{itemize}
+    \end{itemize}
 
-\subsection*{Compétences}
-Traitement d'images, apprentissage profond, télédétection, séries temporelles, programmation informatique.
+    \subsection*{Compétences}
+    Vision par ordinateur, apprentissage statistique, programmation informatique.
 
 
-\subsection*{Durée \& Rémunération}
-4-5 mois -- \`A partir de février 2018 -- 554.40 euros nets / mois.
+    \subsection*{Durée \& Rémunération}
+    \begin{itemize}
+        \item $4/5$ mois \`A partir de février 2018,
+        \item $554.40$ \euro/mois.
+    \end{itemize}
 
-\subsection*{Candidature}
-1 CV et une lettre de motivation.
+    \subsection*{Candidature}
+    Un \textit{C.V.} et une lettre de motivation.
 
-\section*{Contacts}
-IGN est commanditaire du stage. L'encadrement scientifique de ce stage
-
-\noindent
-\textbf{Ous \& Clem \& Arnaud}\\
-\indent \underline{Adresse}: Equipe MATIS/laboratoire LaSTIG - Institut National de l'Information Géographique et Forestière (IGN),\\
-\indent 73 avenue de Paris 94165 Saint Mandé\\
-\indent \underline{Téléphone}: (+33) 1 43 98 84 36\\
-\indent \underline{Courriel}: \texttt{prenom.nom@ign.fr}\\
-\indent \underline{Web}: \url{http://recherche.ign.fr/labos/matis}\\
-
+    \section*{Contacts}
+    IGN est commanditaire du stage. L'encadrement scientifique se assurer par:
+    \begin{itemize}
+        \item[--] \textsc{Oussama Ennafii \& Clément Mallet:}
+        \begin{itemize}
+            \item[\underline{Adresse:}] Equipe MATIS, laboratoire LaSTIG, Institut National de l'Information Géographique et Forestière (IGN);
+            \item[\underline{Téléphone}:] (+33) 1 43 98 84 36;
+            \item[\underline{Courriel}:] \texttt{prenom.nom@ign.fr};
+            \item[\underline{Web}:] \url{http://recherche.ign.fr/labos/matis}.
+        \end{itemize}
+    \end{itemize}
 \end{document}
