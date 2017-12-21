@@ -4,7 +4,7 @@
 
 \usepackage{matis_proposal}
 
-\title{Title}
+\title{\Large \textsc{Clustering de maquettes de bâtiments pour la qualification de méthode de reconstruction}}
 \date{}
 
 \begin{document}
@@ -12,57 +12,60 @@
     \maketitle
 
     \section*{Contexte}
-    \noindent
-    \par
-    L'équipe MATIS du Laboratoire LaSTIG de l'Institut National de l'information géographique et forestière (IGN) mène depuis plusieurs années
+
+    L'équipe MATIS du Laboratoire LaSTIG de l'Institut National de l'information géographique et forestière (IGN) mène depuis plusieurs années des projets de reconstruction automatique de modèles urbain. En effet, dans un cadre opérationnel, la reconstruction urbaine requiert l'intervention d'un opérateur pour saisir des formes géométriques (points, segments \dots), dans un cadre intéractif, ou de corriger les modèles en sortie des méthodes automatiques. Afin de faciliter l'intervention fastidieuse des opérateurs, on cherche à mettre en place une méthode de qualification automatique de de maquettes de bâtiments à partir des données intrinsèques. La sortie d'un tel algorithme permettra de distinguer les erreurs selon une taxonomy établie en avance.\\
+
+    Le problème a été donc formuler de façon à determiner, grâce à des méthodes d'apprentissage supervisé, les erreurs de chaque bâtiments. On prend en entrée le modèle de bâtiment à qualifier, le Modèle Numérique du Terrain (MNS) --- qui a servit à la production de la maquette --- et l'orthoimage correspondants. On extrait, ainsi, des attributs géométriques, altimétriques et radiométriques afin de former un vecteur d'attributs. Les bâtiments sont classés ainsi selon leur erreurs détectées.\\
 
     \section*{Objectifs du stage}
 
+    Le but du stage est d'investiguer l'apport du Clustering --- et des approches non supervisées --- pour classer les maquettes en entrée.\\
 
-    %volume de données
-    Travail à réaliser :
+    Travail à réaliser:
     \begin{itemize}
-    \item
+        \item[--] En reposant sur les attributs déjà présents, évaluer les méthodes de Clustering pour classer les bâtiments;
+        \item[--] Chercher les bons attributs qui pourront améliorer le Clustering;
+        \item[--] Interpréter les clusters en sortie en comparant avec la taxonomy préétablie.
     \end{itemize}
-
-    3D urban reconstruction is a very active research subject. In fact, urban models have a wide application range from planning to simulation or visualization. For instance, 3D city models can be used to efficiently plan cell phone tower constructions. In spite of efforts in the research community, urban modelling widely involves human interaction [Musialski et al., 2012]. In fact, even though automatic reconstruction models are seamless, they require human operator to control the quality of the final output. The laborious human correction process actually requires a significant amount of time, which entices the non-scalability of the overall process. It is then paramount that we design a qualification method that can easily recognize and label errors in the 3D model. Potentially, it should recommend, accordingly, a set of simple actions to the operator.
-
-Our approach is based upon supervised classification. Indeed, in IGN, we have established an error taxonomy based on the models we have in hand [Boudet and Paparoditis, 2006; Michelin et al., 2013]. The classification self-diagnoses the reconstructed buildings based on hand-crafted features. The main idea behind this approach is to be able to assess the reconstruction process without having to manually acquire 3D reference data that are not easy to come by. We also target to evaluate which methods are the best suited for a given level of details and subsequently for a given range of applications.
-
-In this intership, we look forward to investigating non supervised methods. Fearing that the error taxonomy may not be fully scalable, we are looking into non supervised methods in order to discover new errors and in parallel efficiently broadcast the already detected errors to unseen areas. The student will have to look into manifold learning techniques. We can start off with the baseline hand-crafted features used for the supervised method. We will in particular investigate the relevance of graph kernels. Last but not least, the student will try learned-features-based methods: auto-encoders and Boltzman machines, for instance.
 
     \subsection*{Environnement technique}
     \begin{itemize}
         \item[OS:] Linux (Ubuntu);
         \item[Language:] Python:
         \begin{itemize}
-            \item scikit-learn,
-            \item opencv,
-            \item scikit-image.
+            \item[--] scikit-learn,
+            \item[--] opencv,
+            \item[--] scikit-image.
         \end{itemize}
     \end{itemize}
 
     \subsection*{Compétences}
-    Vision par ordinateur, apprentissage statistique, programmation informatique.
-
+    \begin{itemize}
+      \item[--] Vision par ordinateur;
+      \item[--] Apprentissage statistique;
+      \item[--] Programmation informatique.
+    \end{itemize}
 
     \subsection*{Durée \& Rémunération}
     \begin{itemize}
-        \item $4/5$ mois \`A partir de février 2018,
-        \item $554.40$ \euro/mois.
+        \item[--] $4/5$ mois \`A partir de février 2018,
+        \item[--] $554.40$ \euro/mois.
     \end{itemize}
 
     \subsection*{Candidature}
-    Un \textit{C.V.} et une lettre de motivation.
+    \begin{itemize}
+        \item[--] un \textit{C.V.};
+        \item[--] une lettre de motivation.
+    \end{itemize}
 
     \section*{Contacts}
-    IGN est commanditaire du stage. L'encadrement scientifique se assurer par:
+    IGN est commanditaire du stage. L'encadrement scientifique sera assurer par:
     \begin{itemize}
         \item[--] \textsc{Oussama Ennafii \& Clément Mallet:}
         \begin{itemize}
-            \item[\underline{Adresse:}] Equipe MATIS, laboratoire LaSTIG, Institut National de l'Information Géographique et Forestière (IGN);
+            \item[\underline{Adresse:}] Equipe MATIS, laboratoire LaSTIG, Institut National de l'Information Géographique et Forestière (IGN), 73 avenue de Paris, 94165 Saint Mandé;
             \item[\underline{Téléphone}:] (+33) 1 43 98 84 36;
-            \item[\underline{Courriel}:] \texttt{prenom.nom@ign.fr};
+            \item[\underline{Courriel}:] \texttt{<prenom>.<nom>@ign.fr};
             \item[\underline{Web}:] \url{http://recherche.ign.fr/labos/matis}.
         \end{itemize}
     \end{itemize}
